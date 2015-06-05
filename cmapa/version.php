@@ -28,9 +28,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_cmapa';
-$plugin->version = 2014111000;
+$plugin->version = 2015121200;
 $plugin->release = 'v0.0';
-$plugin->requires = 2014111000;
+$plugin->requires = 0;
 $plugin->maturity = MATURITY_ALPHA;
 $plugin->cron = 0;
 $plugin->dependencies = array();
