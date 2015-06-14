@@ -84,9 +84,15 @@ if(count($parts)>1) {
 	$lang = $parts[0] .'_'.strtoupper($parts[1]);
 }
 $answer = '<meta name="gwt:property" content="locale='.$lang.'">';//AQUI
-$id="2";
-$name="er";
+
+$name="";
 $response="";
+
+$context = context_module::instance($cm->id);
+$wea=has_capability('mod/cmapa:submit', $context);
+
+if($wea){
+
 $answer .= '<link type="text/css" rel="stylesheet" href="'
 		.$CFG->wwwroot.'/question/type/conceptmap/cmapweb/CmapWeb.css">'
 				.'<script type="text/javascript" language="javascript" src="'
@@ -104,8 +110,14 @@ if($readonly) {
 echo $answer;
 //java_ajax_generar una guardado automatico.
 //boton
-
-
+echo "<a href='/mod/cmapa/savebutton.php?rspns=".$response."'>'guardar' </a>";
 
 // Finish the page.
+}
+else
+{
+	
+echo "hola";	
+	
+}
 echo $OUTPUT->footer();
