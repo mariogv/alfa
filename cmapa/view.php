@@ -117,7 +117,7 @@ echo "<a href='/mod/cmapa/savebutton.php?rspns=".$response."'>'guardar' </a>";
 else
 {
 	
-echo "hola";	
+echo "Elija al alumno que desea revisar";	
 	
 }
 echo $OUTPUT->footer();
